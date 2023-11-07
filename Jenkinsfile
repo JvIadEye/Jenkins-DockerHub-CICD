@@ -14,7 +14,7 @@ pipeline {
       }
     }
 
-    //to run docker scan jviadeye/nginx_image, the host need to run this command first "yum install docker-scan-plugin"
+    //to run docker scan jviadeye/nginx_image, you need to run this command first "yum install docker-scan-plugin"
     stage('Scan') {
       steps {
         sh 'docker scan jviadeye/nginx_image'
