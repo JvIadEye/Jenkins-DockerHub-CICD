@@ -3,7 +3,7 @@ pipeline {
 
   //get the credential of dockerhub from jenkins
   environment {
-    DOCKERHUB_CREDENTIALS = credentials('jviadeye-dockerhub')
+    DOCKERHUB_CREDENTIALS = credentials('dockerhub')
   }
   
   stages {
@@ -14,12 +14,6 @@ pipeline {
       }
     }
 
-    //to run docker scan jviadeye/nginx_image, you need to run this command first "yum install docker-scan-plugin"
-    stage('Scan') {
-      steps {
-        sh 'docker scan jviadeye/nginx_image'
-      }
-    }
 
     //publish image on dockerhub
     stage('Publish') {
