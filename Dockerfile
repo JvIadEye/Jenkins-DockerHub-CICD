@@ -1,2 +1,2 @@
-#Download base image nginx
-FROM nginx:latest
+#Download base image centos
+FROM centos:7
