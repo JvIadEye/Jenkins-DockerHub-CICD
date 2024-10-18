@@ -3,7 +3,7 @@ pipeline {
 
   //get the credential of dockerhub from jenkins
   environment {
-    DOCKERHUB_CREDENTIALS = credentials('JENKINS_DOCKERHUB')
+    DOCKERHUB_CREDENTIALS = credentials('dockerhub')
   }
   
   stages {
