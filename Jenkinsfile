@@ -19,7 +19,7 @@ pipeline {
     stage('Publish') {
       steps {
         sh '''
-          docker login -u huy.tran@netpoleons.com -p Admin@123
+          docker login -u $DOCKERHUB_CREDENTIALS_USR -p $DOCKERHUB_CREDENTIALS_PSW
           docker push jviadeye/nginx_image
           docker logout
         '''
